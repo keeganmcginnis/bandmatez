@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bandmatez</title>
+  <title>BandMatez</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
-
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="#" class="brand"> BandMatez </a>
+            <ul class="nav">
+               <li> <%= link_to "All Bands", statuses_path %></li> 
+            </ul>
+          </div>
+        </div>
+      </div>    
+    <div class="container"> 
+      <%= yield %>
+    </div>
 </body>
 </html>
