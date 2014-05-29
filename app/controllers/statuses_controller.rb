@@ -1,4 +1,5 @@
 class StatusesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
   # GET /statuses
@@ -25,6 +26,7 @@ class StatusesController < ApplicationController
   # POST /statuses.json
   def create
     @status = Status.new(status_params)
+    @status.user = current_user
 
     respond_to do |format|
       if @status.save
