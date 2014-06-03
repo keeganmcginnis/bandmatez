@@ -4,7 +4,9 @@ Bandmatez::Application.routes.draw do
   resources :statuses
   root to: 'statuses#index'
 
-get '/:id', to: 'profiles#show'
+get '/:id', to: 'profiles#show', as: 'profile'
+
+resources :user_friendships
 
 
   # The priority is based upon order of creation: first created -> highest priority.

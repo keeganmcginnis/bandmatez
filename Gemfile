@@ -8,6 +8,10 @@ gem 'sqlite3'
 gem 'devise'
 gem 'simple_form'
 
+group :test do
+  gem 'shoulda'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
