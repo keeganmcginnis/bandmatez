@@ -22,12 +22,14 @@ ActiveRecord::Schema.define(version: 20140602164945) do
 
   add_index "statuses", ["user_id"], name: "index_statuses_on_user_id"
 
-  create_table "user_friendships", force: true do |t|
+  create_table "user_freindships", force: true do |t|
     t.integer  "user_id"
-    t.integer  "friend_id"
+    t.integer  "freind_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "user_freindships", ["user_id", "freind_id"], name: "index_user_freindships_on_user_id_and_freind_id"
 
   create_table "users", force: true do |t|
     t.string   "first_name"
