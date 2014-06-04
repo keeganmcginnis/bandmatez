@@ -6,7 +6,11 @@ Bandmatez::Application.routes.draw do
 
 get '/:id', to: 'profiles#show', as: 'profile'
 
-resources :user_friendships
+resources :user_friendships do
+  member do
+    put :accept
+  end
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

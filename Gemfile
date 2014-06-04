@@ -7,6 +7,8 @@ gem 'rails', '4.0.4'
 gem 'sqlite3'
 gem 'devise'
 gem 'simple_form'
+gem 'state_machine'
+
 
 group :test do
   gem 'shoulda'

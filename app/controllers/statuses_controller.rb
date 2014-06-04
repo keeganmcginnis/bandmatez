@@ -1,6 +1,7 @@
 class StatusesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_status, only: [:show, :edit, :update, :destroy]
+  before_action :check_status_owner, only: [:edit, :update, :destroy]
 
   # GET /statuses
   # GET /statuses.json
@@ -25,7 +26,7 @@ class StatusesController < ApplicationController
   # POST /statuses
   # POST /statuses.json
   def create
-    @status = current_user.statuses.new(params[:status])
+    @status = current_user.statuses.new(status_params)
     @status.user = current_user
 
     respond_to do |format|
@@ -56,6 +57,7 @@ class StatusesController < ApplicationController
   # DELETE /statuses/1
   # DELETE /statuses/1.json
   def destroy
+
     @status.destroy
     respond_to do |format|
       format.html { redirect_to statuses_url }
@@ -72,5 +74,12 @@ class StatusesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def status_params
       params.require(:status).permit(:name, :content)
+    end
+
+    def check_status_owner
+      if @status.user != current_user
+        flash[:error] = "You're not authorized to change that status"
+        redirect_to @status
+      end
     end
 end
