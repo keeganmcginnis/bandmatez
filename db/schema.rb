@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140604173034) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "statuses", force: true do |t|
     t.text     "content"
     t.datetime "created_at"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140604173034) do
     t.integer  "user_id"
   end
 
-  add_index "statuses", ["user_id"], name: "index_statuses_on_user_id"
+  add_index "statuses", ["user_id"], name: "index_statuses_on_user_id", using: :btree
 
   create_table "user_friendships", force: true do |t|
     t.integer  "user_id"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140604173034) do
     t.string   "state"
   end
 
-  add_index "user_friendships", ["state"], name: "index_user_friendships_on_state"
+  add_index "user_friendships", ["state"], name: "index_user_friendships_on_state", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name"
@@ -50,7 +53,7 @@ ActiveRecord::Schema.define(version: 20140604173034) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
