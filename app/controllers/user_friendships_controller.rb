@@ -6,9 +6,9 @@ class UserFriendshipsController < ApplicationController
       @friend = User.where(profile_name: params[:friend_id]).first
       raise ActiveRecord::RecordNotFound if @friend.nil?
       @user_friendship = current_user.user_friendships.new(friend: @friend)
-    else   
+    else
       flash[:error] = "Friend Required"
-    end 
+    end
 
     def accept
       @user_friendship = current_user.user_friendships.find(params[:id])
@@ -16,12 +16,12 @@ class UserFriendshipsController < ApplicationController
         flash[:success] = "You are now friends with #{@user_friendship}"
       else
         flash[:error] = "Sorry, your freindship was not accepted."
+      end
     end
 
     def edit
        @user_friendship = current_user.user_friendships.find(params[:id])
        @friend = user_friendship.friend
-      
     end
 
   rescue ActiveRecord::RecordNotFound
@@ -52,7 +52,7 @@ class UserFriendshipsController < ApplicationController
         end
       end
     else
-      flash[:error] = "Friend Required. Sorry, bud!"    
+      flash[:error] = "Friend Required. Sorry, bud!"
       redirect_to root_path
     end
   end
