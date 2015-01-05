@@ -7,6 +7,7 @@ gem 'pg'
 gem 'devise'
 gem 'simple_form'
 gem 'state_machine'
+gem 'rails_12factor', group: :production
 
 
 group :test do
