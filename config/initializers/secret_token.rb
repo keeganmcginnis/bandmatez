@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Bandmatez::Application.config.secret_key_base = '7b90d167a0ad0cf2424d4a4cbdc40721b5e1873141bb107bc8d17e0b08b9bd81bbc0508d9ed26c6689a1fe2605c672bffd4b4acf85e0e24e0e338bde0b59122e'
+Bandmatez::Application.config.secret_key_base = '7b90d167a0ad0asdfrewquitjgifjekswcf4444bc02be834b17cd70b08b9bd81bbc0508d9ed26c6689a1fe2605c672bffd4b4acf85e0e24e0e338bde0b59122e'
