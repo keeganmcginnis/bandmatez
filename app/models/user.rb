@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
   has_many :statuses
   has_many :user_friendships
   has_many :friends, through: :user_friendships
-                           
-        
+
+  validates :profile_name, presence: true
 
   def full_name
     first_name + " " + last_name
