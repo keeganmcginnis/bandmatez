@@ -7,11 +7,20 @@
 <% @statuses.each do |status| %>
 <div class="status">
   <strong><%= status.user.profile_name %></strong>
-  <br />
-  <i class="muted">Steam name: <%= status.user.steam_username %></i>
+  <% if !status.user.steam_username.blank? || !status.user.location.blank? %>
+    <br />
+  <% end %>
+  <% if !status.user.steam_username.blank? %>
+    <i class="muted">Steam name: <%= status.user.steam_username %></i>
+  <% end %>
   &nbsp;
   &nbsp;
-  <i class="muted">Location: <%= status.user.location %></i>
+  <% if !status.user.location.blank? %>
+    <i class="muted">Location: <%= status.user.location %></i>
+  <% end %>
+  <% if user_signed_in? && status.user == current_user %>
+    <%= link_to('edit', edit_registration_path(current_user)) %>
+  <% end %>
   <p><%= status.content %></p>
   <div class="meta">
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
