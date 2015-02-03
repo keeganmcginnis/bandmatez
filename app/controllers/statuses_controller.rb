@@ -31,7 +31,7 @@ class StatusesController < ApplicationController
 
     respond_to do |format|
       if @status.save
-        format.html { redirect_to @status, notice: 'Status was successfully created.' }
+        format.html { redirect_to statuses_url, notice: 'Status was successfully created.' }
         format.json { render action: 'show', status: :created, location: @status }
       else
         format.html { render action: 'new' }

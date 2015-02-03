@@ -6,7 +6,12 @@
 
 <% @statuses.each do |status| %>
 <div class="status">
-  <strong><%= status.user.first_name %></strong>
+  <strong><%= status.user.profile_name %></strong>
+  <br />
+  <i class="muted">Steam name: <%= status.user.steam_username %></i>
+  &nbsp;
+  &nbsp;
+  <i class="muted">Location: <%= status.user.location %></i>
   <p><%= status.content %></p>
   <div class="meta">
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
