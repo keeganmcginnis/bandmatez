@@ -1,8 +1,8 @@
 <div class='page-header'>
   <h1><%= @user.profile_name %></h1>
-  <br />Name<%= @user.full_name%>
-  <br />Steam Username<%= @user.steam_username%>
-  <br />Location<%= @user.location %>
+  <br />Name: <%= @user.full_name%>
+  <br />Steam Username: <%= @user.steam_username%>
+  <br />Location: <%= @user.location %>
   <br />
   <h3><%= link_to "Add Friend", user_friendships_path(friend_id: @user), method: 'POST', class: 'btn' %></h3>
 </div>
