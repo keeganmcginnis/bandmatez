@@ -12,10 +12,13 @@ class User < ActiveRecord::Base
 
   def full_name
     first_name + " " + last_name
+  end
 
   def to_param
     profile_name
   end  
-                         
+
+  def steam_link
+    "http://steamcommunity.com/id/#{self.steam_username}"
   end
 end

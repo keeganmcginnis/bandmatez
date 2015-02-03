@@ -11,7 +11,7 @@
     <br />
   <% end %>
   <% if !status.user.steam_username.blank? %>
-    <i class="muted">Steam name: <%= status.user.steam_username %></i>
+    <i class="muted">Steam name: <%= link_to status.user.steam_username, status.user.steam_link %></i>
   <% end %>
   &nbsp;
   &nbsp;
