@@ -6,7 +6,7 @@
 
 <% @statuses.each do |status| %>
 <div class="status">
-  <strong><%= status.user.profile_name, link_to profiles_show %></strong>
+  <strong><%= status.user.profile_name %></strong>
   <% if !status.user.steam_username.blank? || !status.user.location.blank? %>
     <br />
   <% end %>
