@@ -5,6 +5,13 @@
   <br />Favorite Game: <%= @user.favorite_game %>
   <br />System Type: <%= @user.system_type %>
   <br />
+
+  <% if session.key? :current_user %>
+<h3>Current user:</h3>
+<%= image_tag session[:current_user][:image] %>
+<p><%= session[:current_user][:nickname] %></p>
+<p><%= session[:current_user][:uid] %></p>
+<% end %>
   <h3><%= link_to "Add Friend", user_friendships_path(friend_id: @user), method: 'POST', class: 'btn btn-default' %></h3>
 </div>
 

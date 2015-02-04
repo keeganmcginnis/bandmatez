@@ -8,6 +8,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'state_machine'
 gem 'rails_12factor', group: :production
+gem 'omniauth-steam'
+gem 'figaro'
 
 
 group :test do

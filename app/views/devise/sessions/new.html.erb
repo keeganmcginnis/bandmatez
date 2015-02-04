@@ -8,6 +8,9 @@
     <%= f.input :email %>
     <%= f.input :password %>
 
+    <h1>Or login with Steam!</h1>
+    <%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %>
+
   <% if devise_mapping.rememberable? %>
     <%= f.input :remember_me, as: :boolean %>
   <% end %>

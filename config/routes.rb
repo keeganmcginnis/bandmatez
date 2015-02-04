@@ -3,6 +3,7 @@ Bandmatez::Application.routes.draw do
   devise_for :users
   resources :statuses
   root to: 'statuses#index'
+  post 'auth/steam/callback' => 'statuses#index_callback'
 
 get '/:id', to: 'profiles#show', as: 'profile'
 
