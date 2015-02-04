@@ -21,4 +21,5 @@ class User < ActiveRecord::Base
   def steam_link
     "http://steamcommunity.com/id/#{self.steam_username}"
   end
+
 end

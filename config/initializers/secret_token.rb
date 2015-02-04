@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Bandmatez::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+Bandmatez::Application.config.secret_key_base = 'bd6dae29d28178e705c6ddabad622733d603c6bfcaa214cd77a4c91c707c1d8c8fb970c9d8074c877857b6dcc76a7bb5196b2b80d91d0acece7a4ca6d1838003'

@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 20150203160706) do
     t.datetime "updated_at"
     t.string   "steam_username"
     t.string   "location"
+    t.string   "system_type"
+    t.string   "favorite_game"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -3,11 +3,13 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'postgresql'
+
 development:
   adapter: postgresql
   database: bandmatez_dev
   pool: 5
   timeout: 5000
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -18,8 +20,10 @@ test:
   pool: 5
   timeout: 5000
 
+
 production:
   adapter: postgresql
   database: bandmatez_prod
   pool: 5
   timeout: 5000
+

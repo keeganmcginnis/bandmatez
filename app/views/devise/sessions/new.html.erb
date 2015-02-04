@@ -4,14 +4,15 @@
 
 <fieldset>
   <legend>Sign in</legend>
-   <%= f.input :email %>
-   <%= f.input :password %>
+  
+    <%= f.input :email %>
+    <%= f.input :password %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.input :remember_me, as: :boolean %></div>
-  <% end -%>
+  <% if devise_mapping.rememberable? %>
+    <%= f.input :remember_me, as: :boolean %>
+  <% end %>
 
-  <div><%= f.button :submit, "Sign in" %></div>
+ <%= f.button :submit, "Sign in", class: 'btn btn-default' %>
 </fieldset>
 <% end %>
 
