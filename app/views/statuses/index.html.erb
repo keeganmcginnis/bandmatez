@@ -2,9 +2,34 @@
   <h1>All Steamers in Sauna.</h1>
 </div>
 
+<div class="row">
+<p class="sort-text">System</p>
+<select class="form-control sort-objects">
+  <option>Mac</option>
+  <option>PC</option>
+ </select>
+
+<p class="sort-text">Favorite Game </p>
+ <select class="form-control sort-objects">
+   <option>CS:GO</option>
+   <option>Left 4 Dead</option>
+   <option>Civ IV</option>
+   <option>Team Fortress 2</option>
+   <option>Rust</option>
+ </select>
+
+<p class="sort-text">Country</p>
+  <select class="form-control sort-objects">
+    <option>America</option>
+    <option>Germany</option>
+    <option>Mexico</option>
+    <option>China</option>
+    <option>Japan</option>
+  </select>
 
 
-<%= link_to "Post a New Status", new_status_path, class: "btn btn-danger btn-block"%>
+
+<%= link_to "Post a New Status", new_status_path, class: "btn btn-danger btn-custom"%>
 
 <% @statuses.each do |status| %>
 <div class="status">

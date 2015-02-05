@@ -85,36 +85,11 @@
            </div>
           <% end %>
           <% if user_signed_in? %>
-          <div class="row">
-          <div class="col-md-3">
-<p class="sort-text">System</p>
-<select class="form-control sort-objects">
-  <option>Mac</option>
-  <option>PC</option>
- </select>
+          <div class="">
+        <% end %>
+      </div>
 
-<p class="sort-text">Favorite Game </p>
- <select class="form-control">
-   <option>CS:GO</option>
-   <option>Left 4 Dead</option>
-   <option>Civ IV</option>
-   <option>Team Fortress 2</option>
-   <option>Rust</option>
- </select>
-
-<p class="sort-text">Country</p>
-  <select class="form-control">
-    <option>America</option>
-    <option>Germany</option>
-    <option>Mexico</option>
-    <option>China</option>
-    <option>Japan</option>
-  </select>
-
-<% end %>
-</div>
-
-     <div class="col-md-9">
+     <div class="col-mid-9">
       <%= yield %>
     </div>
     </div>

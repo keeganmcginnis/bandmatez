@@ -1,9 +1,15 @@
 <div class="row">
-  <div class="span4">
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "well"}) do |f| %>
+  <div class="span8">
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "well well-lg"}) do |f| %>
 
 <fieldset>
   <legend>Sign in</legend>
+
+  <div class="">
+    <h4>Sign up, meet local steamers, make friendly friends and things of such.</h4>
+  </div>
+
+
   
   <h4>Email</h4>
     <%= f.text_field :email, class: 'form-control' %>
@@ -15,17 +21,13 @@
   <% end %>
 
 
-  <h3>Or login with Steam!</h3>
+  <h3>Or login with Steam! (Coming soon! Dont login with steam quite yet.)</h3>
     <%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %>
 
- <%= f.button :submit, "Sign in", class: 'btn btn-default' %>
+ <%= f.button :submit, "Sign in", class: 'btn btn-danger btn-lg' %>
 </fieldset>
 <% end %>
 
 <%= render "devise/shared/links" %>
-  </div>
-
-  <div class="span8">
-    <h2>Sign up, meet local steamers, make friendly friends and things of such.</h2>
   </div>
 </div>
