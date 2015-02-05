@@ -11,8 +11,8 @@
     </div>
   <% end %>
 
-  <%= f.input :content %>
+  <%= f.text_field :content, class: 'form-control' %>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-danger status-button' %>
   </div>
 <% end %>

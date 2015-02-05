@@ -5,15 +5,18 @@
 <fieldset>
   <legend>Sign in</legend>
   
-    <%= f.input :email %>
-    <%= f.input :password %>
-
-    <h1>Or login with Steam!</h1>
-    <%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %>
+  <h4>Email</h4>
+    <%= f.text_field :email, class: 'form-control' %>
+  <h4>Password</h4>  
+    <%= f.text_field :password, class: 'form-control' %>
 
   <% if devise_mapping.rememberable? %>
     <%= f.input :remember_me, as: :boolean %>
   <% end %>
+
+
+  <h3>Or login with Steam!</h3>
+    <%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %>
 
  <%= f.button :submit, "Sign in", class: 'btn btn-default' %>
 </fieldset>

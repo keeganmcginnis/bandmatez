@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -87,13 +87,13 @@
           <% if user_signed_in? %>
           <div class="row">
           <div class="col-md-3">
-<p>System</p>
-<select class="form-control">
+<p class="sort-text">System</p>
+<select class="form-control sort-objects">
   <option>Mac</option>
   <option>PC</option>
  </select>
 
-<p>Favorite Game </p>
+<p class="sort-text">Favorite Game </p>
  <select class="form-control">
    <option>CS:GO</option>
    <option>Left 4 Dead</option>
@@ -102,7 +102,7 @@
    <option>Rust</option>
  </select>
 
-<p>Country</p>
+<p class="sort-text">Country</p>
   <select class="form-control">
     <option>America</option>
     <option>Germany</option>

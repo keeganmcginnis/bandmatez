@@ -20,3 +20,19 @@ body {
   margin-top: 10px;
 }
 
+.remember-me{
+	padding-left: 30px;	
+}
+
+.sort-objects{
+	margin-top: 15px;
+}
+
+.sort-text{
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.status-button{
+	margin-top: 25px;
+}
