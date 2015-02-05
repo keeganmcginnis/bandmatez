@@ -1,7 +1,8 @@
 class StatusesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :set_status, only: [:show, :edit, :update, :destroy]
   before_action :check_status_owner, only: [:edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token, only: [:index]
 
   # GET /statuses
   # GET /statuses.json
