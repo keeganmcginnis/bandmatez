@@ -5,16 +5,13 @@
 <fieldset>
   <legend>Sign in</legend>
 
-  <div class="">
+  <div class="sign-in-text">
     <h4>Sign up, meet local steamers, make friendly friends and things of such.</h4>
-  </div>
-
-
+  </div> 
   
-  <h4>Email</h4>
-    <%= f.text_field :email, class: 'form-control' %>
-  <h4>Password</h4>  
-    <%= f.text_field :password, class: 'form-control' %>
+ 
+   <%= f.text_field :email, class: 'form-control', placeholder: "Email" %>  
+   <%= f.text_field :password, class: 'form-control', placeholder: "Password" %>
 
   <% if devise_mapping.rememberable? %>
     <%= f.input :remember_me, as: :boolean %>
