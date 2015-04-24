@@ -20,10 +20,7 @@ body {
   margin-top: 10px;
 }
 
-.remember-me{
-	padding-left: 30px;	
-}
-
+	
 .sort-objects{
 	margin-top: 15px;
 }
@@ -39,5 +36,9 @@ body {
 
 .btn-custom{
 	margin-top: 20px;
+}
+
+.form-control{
+	margin-bottom: 30px;
 }
 
